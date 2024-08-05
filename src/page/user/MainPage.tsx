@@ -2,8 +2,8 @@ import { useContext } from "react"
 import { UserContext } from "../../lib/context"
 
 const MainPage = () => {
-    const { darkTheme } = useContext(UserContext);
-    const bgURL = darkTheme
+    const { theme } = useContext(UserContext);
+    const bgURL = theme
       ? "src/assets/dark_bg.jpg"
       : "src/assets/light_bg.jpg";
   return (
