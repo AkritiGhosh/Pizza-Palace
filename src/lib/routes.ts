@@ -5,7 +5,7 @@ import { RouteObject } from "react-router-dom";
 // const ComingSoon = lazy(() => import("../page/user/ComingSoon"));
 const PageNotFound = lazy(() => import("../page/user/404"));
 const Dashboard = lazy(() => import("../page/company/Dashboard"));
-const LandingPage = lazy(() => import("../page/consumer/LandingPage"));
+const LandingPage = lazy(() => import("../page/user/LandingPage"));
 
 export const customerRoutes: RouteObject[] = [
   { path: "/", Component: LandingPage },

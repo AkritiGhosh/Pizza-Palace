@@ -2,9 +2,9 @@ import { lazy } from "react";
 import { RouteObject } from "react-router-dom";
 const PageNotFound = lazy(() => import("./404"));
 const AuthPage = lazy(() => import("./AuthPage"));
-const LandingPage = lazy(() => import("../consumer/LandingPage"));
+const LandingPage = lazy(() => import("./LandingPage"));
 
-const PublicRoutes = () : RouteObject => {
+const PublicRoutes = (): RouteObject => {
   return {
     element: <LandingPage />,
     children: [
