@@ -1,7 +1,11 @@
+import { UserProfiles } from "./constants";
+
 export const checkAuth = () => {
-    return true
-} 
+  return true;
+};
 
 export const getUser = () => {
-    return
-}
+  return {
+    profile: UserProfiles?.CUSTOMER,
+  };
+};

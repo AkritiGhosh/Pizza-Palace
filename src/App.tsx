@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { checkAuth } from "./lib/core";
+import { Suspense, useEffect, useState } from "react";
+import { checkAuth, getUser } from "./lib/core";
 import { UserContext } from "./lib/context";
 import { UserProfiles } from "./lib/constants";
 import PrivateRoutes from "./page/user/PrivateRoutes";
@@ -22,7 +22,7 @@ function App() {
   return (
     <UserContext.Provider
       value={{
-        user: UserProfiles.CUSTOMER,
+        user: getUser()?.profile,
         theme: darkTheme,
         setTheme: setDarkTheme,
       }}
