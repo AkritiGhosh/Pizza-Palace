@@ -1,32 +1,24 @@
-import MainSection from "../../components/consumer/MainSection";
+import { useContext } from "react";
+import { UserContext } from "../../lib/context";
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
-  const sections = [
-    {
-      heading: "Welcome to Pizza Palace",
-      section: <MainSection />,
-    },
-    {
-      heading: "Select your pizza",
-      section: <></>,
-    },
-    {
-      heading: "Build your own pizza",
-      section: <></>,
-    },
-  ];
+  const { theme } = useContext(UserContext);
+  const bgURL = theme ? "src/assets/dark_bg.jpg" : "src/assets/light_bg.jpg";
 
   return (
-    <main className="w-full h-screen bg-cover snap-y snap-mandatory overflow-auto">
-      {sections?.map((section, idx) => (
-        <section
-          key={"section" + idx}
-          className="snap-start w-full h-screen flex flex-col gap-4 snap-always"
-        >
-          <h1>{section?.heading}</h1>
-          <div>{section?.section}</div>
-        </section>
-      ))}
+    <main
+      style={{ backgroundImage: `url(${bgURL})` }}
+      className="w-full h-screen bg-cover snap-y snap-mandatory overflow-auto"
+    >
+      <div className="w-2/5 h-full ml-4 md:ml-[5%] flex flex-col gap-5 justify-center text-right">
+        <h1>
+          Fall in love with <br /> Delicious Pizza
+        </h1>
+        <button>
+          <Link to={"/place-order"}>Place your order</Link>
+        </button>
+      </div>
     </main>
   );
 };
