@@ -2,9 +2,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Suspense, useEffect, useState } from "react";
 import { checkAuth, getUser } from "./lib/core";
 import { UserContext } from "./lib/context";
-import { UserProfiles } from "./lib/constants";
 import PrivateRoutes from "./page/user/PrivateRoutes";
 import PublicRoutes from "./page/user/PublicRoutes";
+import LoaderGif from "./components/user/LoaderGif";
 
 function App() {
   const [darkTheme, setDarkTheme] = useState<boolean>(false);
@@ -15,9 +15,9 @@ function App() {
 
   const privateRouter = createBrowserRouter([
     ...PrivateRoutes(),
-    PublicRoutes(),
+    ...PublicRoutes(),
   ]);
-  const publicRouter = createBrowserRouter([PublicRoutes()]);
+  const publicRouter = createBrowserRouter(PublicRoutes());
 
   return (
     <UserContext.Provider
@@ -27,7 +27,9 @@ function App() {
         setTheme: setDarkTheme,
       }}
     >
-      <RouterProvider router={checkAuth() ? privateRouter : publicRouter} />
+      <Suspense fallback={<LoaderGif />}>
+        <RouterProvider router={checkAuth() ? privateRouter : publicRouter} />
+      </Suspense>
     </UserContext.Provider>
   );
 }
