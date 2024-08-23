@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-1.[ **Introduction**](#1-introduction)
+1. [ **Introduction**](#1-introduction)
 
 - [Purpose](#11-purpose)
 - [Scope](#12-scope)
