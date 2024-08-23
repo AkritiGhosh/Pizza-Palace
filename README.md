@@ -4,24 +4,24 @@
 
 1. [ **Introduction**](#1-introduction)
 
-- [Purpose](#11-purpose)
-- [Scope](#12-scope)
-- [Overview](#13-overview)
-- [Definitions and Acronyms](#14-definitions-and-acronyms)
+      - [Purpose](#11-purpose)
+      - [Scope](#12-scope)
+      - [Overview](#13-overview)
+      - [Definitions and Acronyms](#14-definitions-and-acronyms)
 
 2. [ **Product Description**](#2-product-description)
 
-- [Product Perspective](#21-product-perspective)
-- [Product Features](#22-product-features)
-- [User Classes and Characteristics](#23-user-classes-and-characteristics)
-- [Operating Environment](#24-operating-environment)
-- [Design and Implementation Constraints](#25-design-and-implementation-constraints)
-- [Assumptions and Dependencies](#26-assumptions-and-dependencies)
+      - [Product Perspective](#21-product-perspective)
+      - [Product Features](#22-product-features)
+      - [User Classes and Characteristics](#23-user-classes-and-characteristics)
+      - [Operating Environment](#24-operating-environment)
+      - [Design and Implementation Constraints](#25-design-and-implementation-constraints)
+      - [Assumptions and Dependencies](#26-assumptions-and-dependencies)
 
 3. [ **Specific Requirements**](#3-specific-requirements)
 
-- [Functional Requirements](#31-functional-requirements)
-- [Non-Functional Requirements](#32-non-functional-requirements)
+      - [Functional Requirements](#31-functional-requirements)
+      - [Non-Functional Requirements](#32-non-functional-requirements)
 
 4. [ **Use Cases**](#4-use-cases)
 
