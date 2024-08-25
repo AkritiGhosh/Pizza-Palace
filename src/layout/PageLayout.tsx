@@ -1,9 +1,9 @@
-import { ReactNode } from 'react';
-import Header from '../components/consumer/Header';
+import { ReactNode } from "react";
+import Header from "../components/consumer/header/Header";
 
 type LayoutProps = {
-    children : ReactNode
-}
+  children: ReactNode;
+};
 
 const PageLayout = ({ children }: LayoutProps) => {
   return (
@@ -14,4 +14,4 @@ const PageLayout = ({ children }: LayoutProps) => {
   );
 };
 
-export default PageLayout
+export default PageLayout;
