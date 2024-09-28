@@ -78,23 +78,31 @@ const Header = () => {
           </svg>
         }
       >
-        <li className="relative w-full flex flex-row items-center h-16  py-2 px-4 gap-4">
-          <span className="w-10 h-10 rounded-full bg-purple-600 text-white text-xl font-bold flex items-center justify-center">
-            U
-          </span>
-          <span className="text-xl font-medium">User name</span>
-        </li>
-        {menuLinks?.map((menuItem) => (
-          <li
-            id={menuItem?.id}
-            className="w-full py-2 px-4  text-sm hover:bg-amber-200/20 hover:font-bold"
-          >
-            <Link to={menuItem?.path}>{menuItem?.name}</Link>
+        {false ? (
+          <li className="w-full py-2 px-4  text-sm text-amber-500 hover:bg-red-200/20 hover:font-bold cursor-pointer">
+            Login
           </li>
-        ))}
-        <li className="w-full py-2 px-4  text-sm text-red-500 hover:bg-red-200/20 hover:font-bold cursor-pointer">
-          Log out
-        </li>
+        ) : (
+          <>
+            <li className="relative w-full flex flex-row items-center h-16  py-2 px-4 gap-4">
+              <span className="w-10 h-10 rounded-full bg-purple-600 text-white text-xl font-bold flex items-center justify-center">
+                U
+              </span>
+              <span className="text-xl font-medium">User name</span>
+            </li>
+            {menuLinks?.map((menuItem) => (
+              <li
+                id={menuItem?.id}
+                className="w-full py-2 px-4  text-sm hover:bg-amber-200/20 hover:font-bold"
+              >
+                <Link to={menuItem?.path}>{menuItem?.name}</Link>
+              </li>
+            ))}
+            <li className="w-full py-2 px-4  text-sm text-red-500 hover:bg-red-200/20 hover:font-bold cursor-pointer">
+              Log out
+            </li>
+          </>
+        )}
       </Dropdown>
     </header>
   );
