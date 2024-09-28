@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.scroll-thin::-webkit-scrollbar{
+  width: 4px;
+}
+.scroll-thin::-webkit-scrollbar-track{
+    background-color: lightgray;
+    opacity: 10;
+}
+.scroll-thin::-webkit-scrollbar-thumb {
+    background-color: antiquewhite;
+}
