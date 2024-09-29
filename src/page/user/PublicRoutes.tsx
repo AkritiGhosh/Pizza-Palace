@@ -1,5 +1,9 @@
 import { lazy } from "react";
 import { RouteObject } from "react-router-dom";
+const VegMenu = lazy(() => import("../consumer/menu/VegMenu"));
+const NonVegMenu = lazy(() => import("../consumer/menu/NonVegMenu"));
+const Sides = lazy(() => import("../consumer/menu/Sides"));
+const Combo = lazy(() => import("../consumer/menu/Combo"));
 const Menu = lazy(() => import("../consumer/menu/Menu"));
 const Cart = lazy(() => import("../../components/consumer/Cart"));
 const BuildCustom = lazy(() => import("../consumer/BuildCustom"));
@@ -16,10 +20,10 @@ const PublicRoutes = (): RouteObject[] => {
       Component: Menu,
       children: [
         { path: "offer", Component: Menu },
-        { path: "veg", Component: Menu },
-        { path: "non-veg", Component: Menu },
-        { path: "sides", Component: Menu },
-        { path: "combos", Component: Menu },
+        { path: "veg", Component: VegMenu },
+        { path: "non-veg", Component: NonVegMenu },
+        { path: "sides", Component: Sides },
+        { path: "combos", Component: Combo },
       ],
     },
     { path: "/build-custom-pizza", Component: BuildCustom },
