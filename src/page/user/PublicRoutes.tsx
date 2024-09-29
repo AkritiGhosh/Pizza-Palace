@@ -1,8 +1,7 @@
 import { lazy } from "react";
 import { RouteObject } from "react-router-dom";
-const Menu = lazy(() => import("../consumer/Menu"));
+const Menu = lazy(() => import("../consumer/menu/Menu"));
 const Cart = lazy(() => import("../../components/consumer/Cart"));
-const PlaceOrder = lazy(() => import("../consumer/PlaceOrder"));
 const BuildCustom = lazy(() => import("../consumer/BuildCustom"));
 const PageNotFound = lazy(() => import("./404"));
 const AuthPage = lazy(() => import("./AuthPage"));
@@ -23,7 +22,6 @@ const PublicRoutes = (): RouteObject[] => {
         { path: "combos", Component: Menu },
       ],
     },
-    { path: "/place-order", Component: PlaceOrder },
     { path: "/build-custom-pizza", Component: BuildCustom },
     { path: "cart", Component: Cart },
     { path: "*", Component: PageNotFound },
