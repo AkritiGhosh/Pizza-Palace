@@ -1,5 +1,6 @@
 import { lazy } from "react";
 import { RouteObject } from "react-router-dom";
+const Offer = lazy(() => import("../consumer/menu/Offer"));
 const VegMenu = lazy(() => import("../consumer/menu/VegMenu"));
 const NonVegMenu = lazy(() => import("../consumer/menu/NonVegMenu"));
 const Sides = lazy(() => import("../consumer/menu/Sides"));
@@ -19,7 +20,7 @@ const PublicRoutes = (): RouteObject[] => {
       path: "/menu",
       Component: Menu,
       children: [
-        { path: "offer", Component: Menu },
+        { path: "offer", Component: Offer },
         { path: "veg", Component: VegMenu },
         { path: "non-veg", Component: NonVegMenu },
         { path: "sides", Component: Sides },
